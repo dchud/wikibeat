@@ -1,6 +1,6 @@
 #N canvas 162 134 878 671 10;
 #X declare -lib mrpeach;
-#X obj 371 622 dac~;
+#X obj 369 647 dac~;
 #X obj 51 220 metro;
 #X msg 52 135 bang;
 #X msg 89 135 stop;
@@ -35,6 +35,9 @@
 #X obj 320 427 r d;
 #X obj 429 426 r c;
 #X obj 496 419 r b;
+#X obj 368 608 freeverb~;
+#X msg 480 572 dry 0.5;
+#X obj 479 551 loadbang;
 #X connect 1 0 17 0;
 #X connect 2 0 1 0;
 #X connect 3 0 1 0;
@@ -66,11 +69,14 @@
 #X connect 24 1 23 2;
 #X connect 24 2 22 2;
 #X connect 24 3 16 1;
-#X connect 25 0 0 0;
-#X connect 25 0 0 1;
+#X connect 25 0 35 0;
 #X connect 29 0 17 1;
 #X connect 30 0 23 1;
 #X connect 31 0 22 1;
 #X connect 32 0 21 1;
 #X connect 33 0 20 1;
 #X connect 34 0 19 1;
+#X connect 35 0 0 0;
+#X connect 35 1 0 1;
+#X connect 36 0 35 0;
+#X connect 37 0 36 0;
