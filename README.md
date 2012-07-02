@@ -16,7 +16,8 @@ Installation
 ============
 
 First install wikipulse using @edsu's exact instructions.  wikibeat
-uses wikipulse as-is, without modifications.
+uses wikipulse as-is, without modifications, though you should
+probably change the param names in config.json starting with 'irc'.
 
     - see http://github.com/edsu/wikipulse
 
