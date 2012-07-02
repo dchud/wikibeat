@@ -14,6 +14,13 @@
 #X obj 17 234 sel 1 0;
 #X obj 62 304 outlet;
 #X obj 17 193 <;
+#X text 167 222 should the oscillator attached to the left outlet fire?
+;
+#X text 168 238 random based on relative percentage of edits for the
+;
+#X text 170 253 database under consideration relative to the database
+;
+#X text 170 267 receiving the most edits;
 #X connect 0 0 8 0;
 #X connect 2 0 11 0;
 #X connect 3 0 10 0;
