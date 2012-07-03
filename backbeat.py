@@ -26,11 +26,12 @@ if __name__ == '__main__':
             url = '%s/%s/60000.json' % (BASE_URL, wp)
             r = requests.get(url)
             beats.append(int(r.content))
-        sorted_beats = sorted(beats, reverse=True)[:20]
+        #sorted_beats = sorted(beats, reverse=True)[:20]
+        sorted_beats = [b for b in beats if b > 1]
         print sorted_beats
-        for i in range(len(sorted_beats)):
+        for i in range(len(sorted_beats)): 
             m = OSCMessage('/wikibeat/%s' % str(i + 1))
-            m.append(sorted_beats[i])
+            m.append(sorted_beats[i]) 
             client.send(m)
         time.sleep(1)
     
