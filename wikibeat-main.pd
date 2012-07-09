@@ -1,4 +1,4 @@
-#N canvas 375 405 878 671 10;
+#N canvas 174 137 878 671 10;
 #X declare -lib mrpeach;
 #X obj 285 648 dac~;
 #X obj 248 277 metro;
@@ -431,6 +431,25 @@
 #X floatatom 515 109 5 0 0 0 - - -;
 #X obj 515 69 loadbang;
 #X msg 515 89 100;
+#X obj 421 646 writesf~ 2;
+#X msg 421 480 open wikibeat-recording.wav;
+#X text 422 460 to record:;
+#X text 594 480 1 click "open" to create soundfile;
+#X msg 428 500 bang;
+#X msg 438 519 stop;
+#X text 470 519 3 click "stop" to stop recording;
+#X text 461 500 2 click "bang" to start recording;
+#X text 445 537 Afterwards you should have a 16-bit \, 44.1 kHz uncompressed
+;
+#X text 443 551 WAV-format audio file in your code directory. You may
+wish;
+#X text 446 564 to rename this file and/or use an audio editor such
+as;
+#X text 444 578 Audacity to normalize it (increase its amplitude to
+maximum;
+#X text 444 592 level) and/or render a compressed MP3 file \, or subject
+it to;
+#X text 446 605 additional craziness of your choosing.;
 #X connect 1 0 20 0;
 #X connect 2 0 1 0;
 #X connect 3 0 1 0;
@@ -442,7 +461,9 @@
 #X connect 8 0 21 1;
 #X connect 8 0 20 1;
 #X connect 9 0 0 0;
+#X connect 9 0 51 0;
 #X connect 9 1 0 1;
+#X connect 9 1 51 1;
 #X connect 10 0 24 0;
 #X connect 20 0 9 0;
 #X connect 20 0 9 1;
@@ -461,3 +482,6 @@
 #X connect 48 0 45 1;
 #X connect 49 0 50 0;
 #X connect 50 0 48 0;
+#X connect 52 0 51 0;
+#X connect 55 0 51 0;
+#X connect 56 0 51 0;
