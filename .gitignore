@@ -18,3 +18,4 @@ npm-debug.log
 ENV
 .DS_Store
 *.swp
+*.wav

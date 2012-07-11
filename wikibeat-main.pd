@@ -432,13 +432,11 @@
 #X obj 515 69 loadbang;
 #X msg 515 89 100;
 #X obj 421 646 writesf~ 2;
-#X msg 421 480 open wikibeat-recording.wav;
+#X msg 421 479 open wikibeat-recording.wav;
 #X text 422 460 to record:;
-#X text 594 480 1 click "open" to create soundfile;
-#X msg 428 500 bang;
+#X text 592 479 1 click "open" to create soundfile;
 #X msg 438 519 stop;
 #X text 470 519 3 click "stop" to stop recording;
-#X text 461 500 2 click "bang" to start recording;
 #X text 445 537 Afterwards you should have a 16-bit \, 44.1 kHz uncompressed
 ;
 #X text 443 551 WAV-format audio file in your code directory. You may
@@ -450,6 +448,8 @@ maximum;
 #X text 444 592 level) and/or render a compressed MP3 file \, or subject
 it to;
 #X text 446 605 additional craziness of your choosing.;
+#X msg 429 500 start;
+#X text 466 500 2 click "start" to start recording;
 #X connect 1 0 20 0;
 #X connect 2 0 1 0;
 #X connect 3 0 1 0;
@@ -484,4 +484,4 @@ it to;
 #X connect 50 0 48 0;
 #X connect 52 0 51 0;
 #X connect 55 0 51 0;
-#X connect 56 0 51 0;
+#X connect 63 0 51 0;
